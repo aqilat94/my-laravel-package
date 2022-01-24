@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "72ba592bf79ffd10bb53362ff6aaff8d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1757,6 +1757,48 @@
                 }
             ],
             "time": "2021-10-01T21:08:31+00:00"
+        },
+        {
+            "name": "mras/custom-auth",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/CustomAuth",
+                "reference": "3c68bd0dcc3e12eb7b034c620a82266005912758"
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mras\\CustomAuth\\Providers\\CustomAuthServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mras\\CustomAuth\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Mras\\CustomAuth\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Custom Auth",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "nesbot/carbon",
@@ -7896,7 +7938,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mras/custom-auth": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
